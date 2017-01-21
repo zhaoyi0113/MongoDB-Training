@@ -34,3 +34,15 @@ NOTE: There is a dump of the video database included in the handouts for the "Cr
 ```javascript
 db.movieDetails.find({"countries.1": "Sweden"},{countries:1,_id:0}).count()
 ```
+
+# Homework 2.4
+
+How many documents in our video.movieDetails collection list just the following two genres: "Comedy" and "Crime" with "Comedy" listed first.
+
+NOTE: There is a dump of the video database included in the handouts for the "Creating Documents" lesson. Use that data set to answer this question.
+
+
+
+```javascript
+db.movieDetails.find({"genres.0": "Comedy", "genres.1": "Crime", genres: {$size:2}}).count()
+```
