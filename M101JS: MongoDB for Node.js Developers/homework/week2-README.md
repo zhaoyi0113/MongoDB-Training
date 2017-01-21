@@ -56,3 +56,11 @@ NOTE: There is a dump of the video database included in the handouts for the "Cr
 ```javascript
 db.movieDetails.find({genres: {$all:  ["Comedy", "Crime"]}}).count()
 ```
+
+# Homework 2.6
+
+Suppose you wish to update the value of the "plot" field for one document in our "movieDetails" collection to correct a typo. Which of the following update operators and modifiers would you need to use to do this?
+
+```javascript
+$set
+```
