@@ -46,3 +46,13 @@ NOTE: There is a dump of the video database included in the handouts for the "Cr
 ```javascript
 db.movieDetails.find({"genres.0": "Comedy", "genres.1": "Crime", genres: {$size:2}}).count()
 ```
+
+# Homework 2.5
+
+As a follow up to the previous question, how many documents in the video.movieDetails collection list both "Comedy" and "Crime" as genres regardless of how many other genres are listed?
+
+NOTE: There is a dump of the video database included in the handouts for the "Creating Documents" lesson. Use that data set to answer this question.
+
+```javascript
+db.movieDetails.find({genres: {$all:  ["Comedy", "Crime"]}}).count()
+```
