@@ -16,3 +16,28 @@ An individual milestone entry will always be smaller than 16K bytes
 *	One frequently displayed view of our data displays company details such as the "name", "founded_year", "twitter_username", etc. as well as milestones.
 
 Some of the milestone fields such as "stoneable_type" and "stoneable" are frequently the same from one milestone to another.
+
+# Homework 4-2
+
+Suppose you are working with a set of categories defined using the following tree structure. "Science" is a sub-category of "Books"; "Chemistry" and "Physics" are sub-categories of "Science"; and "Classical Mechanics" and "Quantum Mechanics" are sub categories of "Physics".
+
+```javascriptBooks
+    Science
+        Chemistry
+        Physics
+            Classical Mechanics
+            Quantum Mechanics
+```
+
+For this tree, each node is represented by a document in a collection called categories.
+
+Which of the following schemas will make it possible to find() all descendants of a category using a single query. For example, all descendants of "Science" are "Chemistry", "Physics", "Classical Mechanics", and "Quantum Mechanics".
+
+```javascript
+db.categories.insertOne({"_id": "Quantum Mechanics", "ancestors": ["Books", "Science", "Physics"], "parent": "Physics"})
+db.categories.insertOne({"_id": "Classical Mechanics", "ancestors": ["Books", "Science", "Physics"], "parent": "Physics"})
+db.categories.insertOne({"_id": "Physics", "ancestors": ["Books", "Science"], "parent": "Science"})
+db.categories.insertOne({"_id": "Chemistry", "ancestors": ["Books", "Science"], "parent": "Science"})
+db.categories.insertOne({"_id": "Science", "ancestors": ["Books"], "parent": "Books"})
+db.categories.insertOne({"_id": "Books", "ancestors": [], "parent": null})
+```
