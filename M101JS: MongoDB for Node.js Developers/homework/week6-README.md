@@ -25,3 +25,87 @@ As a check on your work, the number of unique companies for roger-ehrenberg is 1
 db.companies.aggregate( {"$match": {"name": {"$ne": null}, "relationships.person.permalink":{"$regex": "eric-di-benedetto"}  }   }, {"$group": {"_id": "$name", "count": {"$sum": 1}}}, {"$match": {"count": {"$gte": 1}}}, {"$group": {_id: null, count:{"$sum":1}}},  {"$project": {"_id": 0, "count":1}} )
 { "count" : 15 }
 ```
+
+Homework 6-2
+
+Who is the easiest grader on campus?
+
+Download the handout and import the grades collection using the following command.
+
+```javascript
+
+mongoimport --drop -d test -c grades grades.json
+```
+
+Documents in the grades collection look like this.
+
+```javascript
+
+{
+    "_id" : ObjectId("50b59cd75bed76f46522c392"),
+    "student_id" : 10,
+    "class_id" : 5,
+    "scores" : [
+        {
+            "type" : "exam",
+            "score" : 69.17634380939022
+        },
+        {
+            "type" : "quiz",
+            "score" : 61.20182926719762
+        },
+        {
+            "type" : "homework",
+            "score" : 73.3293624199466
+        },
+        {
+            "type" : "homework",
+            "score" : 15.206314042622903
+        },
+        {
+            "type" : "homework",
+            "score" : 36.75297723087603
+        },
+        {
+            "type" : "homework",
+            "score" : 64.42913107330241
+        }
+    ]
+}
+There are documents for each student (student_id) across a variety of classes (class_id). Note that not all students in the same class have the same exact number of assessments. Some students have three homework assignments, etc.
+
+Your task is to calculate the class with the best average student performance. This involves calculating an average for each student in each class of all non-quiz assessments and then averaging those numbers to get a class average. To be clear, each student's average should include only exams and homework grades. Don't include their quiz scores in the calculation.
+
+What is the class_id which has the highest average student performance? Choose the correct class_id below.
+
+```javascript
+db.grades.aggregate([     { $unwind: '$scores' },     { $match: {'scores.type': { $in: ['exam', 'homework'] } } },     { $group: { _id: { student_id: '$student_id', class_id: '$class_id' },     student_avg: { $avg: '$scores.score' } } },     { $group: { _id: '$_id.class_id', class_avg: { $avg: '$student_avg' } } },     { $sort: { class_avg: -1 } },     { $limit: 1 }  ])
+
+```
+
+Homework 6-3
+
+For companies in our collection founded in 2004 and having 5 or more rounds of funding, calculate the average amount raised in each round of funding. Which company meeting these criteria raised the smallest average amount of money per funding round? You do not need to distinguish between currencies. Write an aggregation query to answer this question.
+
+As a check on your solution, Facebook had the largest funding round average.
+
+```javascript
+db.companies.aggregate([
+    {	$match: { "founded_year" : 2004 }},
+    {
+      $project: {
+          "_id" : 0,
+          "name" : 1,
+          "founded_year" : 1,
+          "funding_rounds" : 1,
+          "total_rounds" : {
+              "$size" : "$funding_rounds"
+          }
+      }
+    },
+    {   $match: { "total_rounds" : { "$gte" : 5 }} },
+    {   $unwind: "$funding_rounds" },
+    {   $group: { "_id" : "$name", "average": { $avg:"$funding_rounds.raised_amount"}} },
+    {   $sort: { "average" : 1 } }
+]);
+```
