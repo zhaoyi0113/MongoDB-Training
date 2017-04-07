@@ -80,3 +80,49 @@ This maximum will be:
 Note that we'll be above 90% capacity for the first time on Friday, which is the correct answer.
 
 
+# Homework 2-3
+
+Suppose you have a 3 member replica set with the primary in Data Center 2 (DC2) and two secondaries in Data Center 1 (DC1). You have set write concern at w=1. 
+
+[<img src="./data_center.jpg">]
+
+application makes three writes to the primary. However, before these writes have been replicated to either of the secondaries, there is a network partition that prevents communication between DC2 and DC1. The partition lasts for 10 minutes. The application producing writes is able to see all three members of the replica set during the entire network partition between DC2 and DC1. No other problems with your system arise during this period.
+
+You should also assume that all members of the replica set have the same priority.
+
+Which of the following are true about the system during the period of the network partition?
+
+# Homework 2-4
+
+Suppose that last night at midnight you took a snapshot of your database with mongodump. At a later time, someone accidentally dropped the only collection in the database using db.collection.drop(). You wish to restore the database to the state it was in immediately before the collection was dropped by replaying the oplog.
+
+Which of the following are steps you should take in order for this to be successful? Check all that apply.
+
+# Homework 2-5 Replaying the oplog
+
+Download Handouts:
+mongod__homework_hw_m202_w3_week3_wk3_536bf5318bb48b4bb3853f31.conf
+backupt__homework_hw_w3_week3_wk3_536bf4e28bb48b4bb3853ecc.tar.gz
+backupD__homework_m202_w3_week3_wk3_536bf4708bb48b4bb3853ec2.tar.gz
+
+This problem will be a hands-on implementation of the last problem.
+
+The backupDB database has one collection, backupColl. Your system is backed up with a mongodump. After one of these, the server continued taking writes until someone (not you) ran the command:
+
+```
+db.backupColl.drop()
+```
+
+Your job is to put your database back into the state it was in immediately before the database was dropped, then use MongoProc to verify that you have done it correctly.
+
+You have been provided with a server directory in the backuptest.tar.gz file that includes your (now empty) data files, the mongodump file in backupDB.tar.gz, and a mongod.conf file. The conf file will set the name of your replica set to "BackupTest" and the port to 30001. Your replica set must have these settings to be graded correct in MongoProc. You may configure the host setting for MongoProc if necessary.
+
+Use MongoProc to evaluate your solution. You can verify that your database is in the correct state with the test button and turn it in once you've passed.
+
+This assignment is fairly tricky so you may want to check this stackoverflow question and answer. An alternative method to the stackoverflow response is using the "mongooplog" tool (there are several solutions to this problem).
+
+If you run into the error with mongorestore "error applying oplog: applyOps: EOF", this issue has been fixed in MongoDB 3.0.4. At the time of this update, 3.0.4 is available for download as a release candidate (The 3.0.4-rc0 mongorestore binary for Ubuntu 14.04 can be downloaded here )
+
+Tip: You may not need this, but if you are interested in updating an oplog's 'op' field for a document, it will complain if you increase the size the document (which it thinks is happening as an intermediate stage of an update), but you can do it anyway by simultaneously unsetting another field. For example, db.oplog.rs.update( { query }, { $set : { "op" : "c" }, $unset : { "o" : 1 } } ).
+
+Tip #2: After restoring, you will find that you have 614800 documents in the collection.
