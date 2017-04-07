@@ -1,0 +1,71 @@
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten] MongoDB starting : pid=49640 port=27001 dbpath=/Users/joey/dev/mongodb/MongoDB-Training/M102: MongoDB for DBAs/final/data/z1 64-bit host=joeys-MacBook-Pro.local
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten] db version v3.4.0
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten] git version: f4240c60f005be757399042dc12f6addbc3170c1
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 0.9.8zh 14 Jan 2016
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten] allocator: system
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten] modules: none
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten] build environment:
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-02-28T18:44:21.165+1100 I CONTROL  [initandlisten] options: { net: { port: 27001 }, processManagement: { fork: true }, replication: { oplogSizeMB: 50, replSet: "z" }, storage: { dbPath: "data/z1", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "a.log" } }
+2017-02-28T18:44:21.166+1100 I -        [initandlisten] Detected data files in /Users/joey/dev/mongodb/MongoDB-Training/M102: MongoDB for DBAs/final/data/z1 created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-02-28T18:44:21.166+1100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7680M,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-02-28T18:44:21.888+1100 I STORAGE  [initandlisten] Starting WiredTigerRecordStoreThread local.oplog.rs
+2017-02-28T18:44:21.888+1100 I STORAGE  [initandlisten] The size storer reports that the oplog contains 20 records totaling to 1976 bytes
+2017-02-28T18:44:21.888+1100 I STORAGE  [initandlisten] Scanning the oplog to determine where to place markers for truncation
+2017-02-28T18:44:21.953+1100 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2017-02-28T18:44:21.953+1100 I CONTROL  [initandlisten] 
+2017-02-28T18:44:21.953+1100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-02-28T18:44:21.953+1100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-02-28T18:44:21.953+1100 I CONTROL  [initandlisten] 
+2017-02-28T18:44:21.953+1100 I CONTROL  [initandlisten] 
+2017-02-28T18:44:21.953+1100 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2017-02-28T18:44:21.966+1100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/joey/dev/mongodb/MongoDB-Training/M102: MongoDB for DBAs/final/data/z1/diagnostic.data'
+2017-02-28T18:44:21.967+1100 I NETWORK  [thread1] waiting for connections on port 27001
+2017-02-28T18:44:21.969+1100 I REPL     [replExecDBWorker-0] New replica set config in use: { _id: "z", version: 1, protocolVersion: 1, members: [ { _id: 1, host: "localhost:27001", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27002", arbiterOnly: true, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 3, host: "localhost:27003", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: 2000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('58b529405bb2e5c9d1c5f5b0') } }
+2017-02-28T18:44:21.969+1100 I REPL     [replExecDBWorker-0] This node is localhost:27001 in the config
+2017-02-28T18:44:21.969+1100 I REPL     [replExecDBWorker-0] transition to STARTUP2
+2017-02-28T18:44:21.969+1100 I REPL     [replExecDBWorker-0] Starting replication storage threads
+2017-02-28T18:44:21.969+1100 I REPL     [replExecDBWorker-0] Starting replication fetcher thread
+2017-02-28T18:44:21.969+1100 I REPL     [replExecDBWorker-0] Starting replication applier thread
+2017-02-28T18:44:21.969+1100 I REPL     [replExecDBWorker-0] Starting replication reporter thread
+2017-02-28T18:44:21.969+1100 I REPL     [rsSync] transition to RECOVERING
+2017-02-28T18:44:21.969+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-02-28T18:44:21.970+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:44:21.970+1100 I REPL     [rsSync] transition to SECONDARY
+2017-02-28T18:44:21.971+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-02-28T18:44:21.971+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-02-28T18:44:21.971+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-02-28T18:44:21.972+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-02-28T18:44:22.024+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:61905 #1 (1 connection now open)
+2017-02-28T18:44:22.024+1100 I NETWORK  [conn1] received client metadata from 127.0.0.1:61905 conn1: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:44:22.058+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:61903 #2 (2 connections now open)
+2017-02-28T18:44:22.058+1100 I NETWORK  [conn2] received client metadata from 127.0.0.1:61903 conn2: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:44:26.986+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-02-28T18:44:26.986+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-02-28T18:44:26.988+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-02-28T18:44:26.989+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-02-28T18:44:26.990+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-02-28T18:45:33.993+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:63142 #3 (3 connections now open)
+2017-02-28T18:45:33.993+1100 I NETWORK  [conn3] received client metadata from 127.0.0.1:63142 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:46:57.969+1100 I -        [conn3] end connection 127.0.0.1:63142 (3 connections now open)
+2017-02-28T18:48:30.086+1100 I COMMAND  [repl writer worker 5] CMD: drop test.foo
+2017-02-28T18:48:41.756+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50077 #4 (3 connections now open)
+2017-02-28T18:48:41.756+1100 I NETWORK  [conn4] received client metadata from 127.0.0.1:50077 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:48:41.758+1100 I COMMAND  [conn4] terminating, shutdown command received
+2017-02-28T18:48:41.758+1100 I NETWORK  [conn4] shutdown: going to close listening sockets...
+2017-02-28T18:48:41.758+1100 I NETWORK  [conn4] closing listening socket: 7
+2017-02-28T18:48:41.758+1100 I NETWORK  [conn4] closing listening socket: 8
+2017-02-28T18:48:41.758+1100 I NETWORK  [conn4] removing socket file: /tmp/mongodb-27001.sock
+2017-02-28T18:48:41.764+1100 I NETWORK  [conn4] shutdown: going to flush diaglog...
+2017-02-28T18:48:41.764+1100 I REPL     [conn4] shutting down replication subsystems
+2017-02-28T18:48:41.764+1100 I REPL     [conn4] Stopping replication reporter thread
+2017-02-28T18:48:41.764+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: CallbackCanceled: Reporter no longer valid
+2017-02-28T18:48:41.764+1100 I REPL     [conn4] Stopping replication fetcher thread
+2017-02-28T18:48:41.764+1100 I REPL     [conn4] Stopping replication applier thread
+2017-02-28T18:48:41.765+1100 I REPL     [conn4] Stopping replication storage threads
+2017-02-28T18:48:41.765+1100 I FTDC     [conn4] Shutting down full-time diagnostic data capture
+2017-02-28T18:48:41.768+1100 I STORAGE  [conn4] WiredTigerKVEngine shutting down
+2017-02-28T18:48:41.893+1100 I STORAGE  [conn4] shutdown: removing fs lock...
+2017-02-28T18:48:41.894+1100 I CONTROL  [conn4] now exiting
+2017-02-28T18:48:41.894+1100 I CONTROL  [conn4] shutting down with code:0

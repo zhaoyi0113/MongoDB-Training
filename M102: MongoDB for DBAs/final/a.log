@@ -1,0 +1,883 @@
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten] MongoDB starting : pid=49697 port=27001 dbpath=/Users/joey/dev/mongodb/MongoDB-Training/M102: MongoDB for DBAs/final/data/z1 64-bit host=joeys-MacBook-Pro.local
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten] db version v3.4.0
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten] git version: f4240c60f005be757399042dc12f6addbc3170c1
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 0.9.8zh 14 Jan 2016
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten] allocator: system
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten] modules: none
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten] build environment:
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-02-28T18:49:46.933+1100 I CONTROL  [initandlisten] options: { net: { port: 27001 }, processManagement: { fork: true }, replication: { oplogSizeMB: 50, replSet: "z" }, storage: { dbPath: "data/z1", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "a.log" } }
+2017-02-28T18:49:46.934+1100 I -        [initandlisten] Detected data files in /Users/joey/dev/mongodb/MongoDB-Training/M102: MongoDB for DBAs/final/data/z1 created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-02-28T18:49:46.934+1100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7680M,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-02-28T18:49:47.332+1100 I STORAGE  [initandlisten] Starting WiredTigerRecordStoreThread local.oplog.rs
+2017-02-28T18:49:47.332+1100 I STORAGE  [initandlisten] The size storer reports that the oplog contains 63 records totaling to 6166 bytes
+2017-02-28T18:49:47.332+1100 I STORAGE  [initandlisten] Scanning the oplog to determine where to place markers for truncation
+2017-02-28T18:49:47.351+1100 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2017-02-28T18:49:47.351+1100 I CONTROL  [initandlisten] 
+2017-02-28T18:49:47.351+1100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-02-28T18:49:47.351+1100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-02-28T18:49:47.351+1100 I CONTROL  [initandlisten] 
+2017-02-28T18:49:47.351+1100 I CONTROL  [initandlisten] 
+2017-02-28T18:49:47.351+1100 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2017-02-28T18:49:47.356+1100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/joey/dev/mongodb/MongoDB-Training/M102: MongoDB for DBAs/final/data/z1/diagnostic.data'
+2017-02-28T18:49:47.356+1100 I NETWORK  [thread1] waiting for connections on port 27001
+2017-02-28T18:49:47.358+1100 W NETWORK  [replExecDBWorker-0] Failed to connect to 127.0.0.1:27003, reason: Connection refused
+2017-02-28T18:49:47.358+1100 I REPL     [replExecDBWorker-0] New replica set config in use: { _id: "z", version: 1, protocolVersion: 1, members: [ { _id: 1, host: "localhost:27001", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27002", arbiterOnly: true, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 3, host: "localhost:27003", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: 2000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('58b529405bb2e5c9d1c5f5b0') } }
+2017-02-28T18:49:47.358+1100 I REPL     [replExecDBWorker-0] This node is localhost:27001 in the config
+2017-02-28T18:49:47.358+1100 I REPL     [replExecDBWorker-0] transition to STARTUP2
+2017-02-28T18:49:47.358+1100 I REPL     [replExecDBWorker-0] Starting replication storage threads
+2017-02-28T18:49:47.359+1100 I REPL     [replExecDBWorker-0] Starting replication fetcher thread
+2017-02-28T18:49:47.359+1100 I REPL     [replExecDBWorker-0] Starting replication applier thread
+2017-02-28T18:49:47.359+1100 I REPL     [replExecDBWorker-0] Starting replication reporter thread
+2017-02-28T18:49:47.359+1100 I REPL     [rsSync] transition to RECOVERING
+2017-02-28T18:49:47.359+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-02-28T18:49:47.359+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:47.360+1100 I REPL     [rsSync] transition to SECONDARY
+2017-02-28T18:49:47.361+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-02-28T18:49:47.362+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-02-28T18:49:47.362+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:47.362+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:47.362+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:47.364+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:47.364+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:47.364+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:47.366+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:47.366+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:47.380+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51455 #1 (1 connection now open)
+2017-02-28T18:49:47.380+1100 I NETWORK  [conn1] received client metadata from 127.0.0.1:51455 conn1: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:49:52.367+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:52.368+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:52.368+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:52.368+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:52.369+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:52.369+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:52.369+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:52.370+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:52.370+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:57.372+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.373+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.373+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:57.373+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.374+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.374+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:57.374+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.375+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.375+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:57.591+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-02-28T18:49:57.591+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-02-28T18:49:57.591+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.592+1100 I REPL     [ReplicationExecutor] VoteRequester(term 1 dry run) received a yes vote from localhost:27002; response message: { term: 1, voteGranted: true, reason: "", ok: 1.0 }
+2017-02-28T18:49:57.592+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-02-28T18:49:57.592+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.592+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.592+1100 I REPL     [ReplicationExecutor] VoteRequester(term 2) received a yes vote from localhost:27002; response message: { term: 2, voteGranted: true, reason: "", ok: 1.0 }
+2017-02-28T18:49:57.592+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 2
+2017-02-28T18:49:57.593+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-02-28T18:49:57.593+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.593+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-02-28T18:49:57.593+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.593+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.593+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.594+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:57.594+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-02-28T18:49:57.594+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.594+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-02-28T18:49:57.594+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.595+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.595+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:57.595+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:57.596+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:57.596+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:58.403+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-02-28T18:49:59.402+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51708 #2 (2 connections now open)
+2017-02-28T18:49:59.402+1100 I NETWORK  [conn2] received client metadata from 127.0.0.1:51708 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:49:59.598+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:59.599+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:59.599+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:59.600+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:59.601+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:59.601+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:49:59.601+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:49:59.601+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:49:59.602+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:01.602+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:01.603+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:01.603+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:01.603+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:01.604+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:01.604+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:01.604+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:01.605+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:01.605+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:03.606+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:03.608+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:03.608+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:03.608+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:03.609+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:03.609+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:03.609+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:03.609+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:03.609+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:05.613+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:05.614+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:05.614+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:05.614+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:05.615+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:05.615+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:05.615+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:05.616+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:05.616+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:07.616+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:07.617+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:07.617+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:07.617+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:07.618+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:07.618+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:07.618+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:07.619+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:07.619+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:09.620+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:09.621+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:09.621+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:09.621+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:09.622+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:09.622+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:09.622+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:09.623+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:09.623+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:11.233+1100 I -        [conn2] end connection 127.0.0.1:51708 (2 connections now open)
+2017-02-28T18:50:11.625+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:11.626+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:11.626+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:11.626+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:11.627+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:11.627+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:11.627+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:11.628+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:11.628+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:13.628+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:13.629+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:13.629+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:13.630+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:13.631+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:13.631+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:13.631+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:13.632+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:13.632+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:15.632+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:15.633+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:15.633+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:15.633+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:15.634+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:15.634+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:15.634+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:15.634+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27003 - HostUnreachable: Connection refused
+2017-02-28T18:50:15.634+1100 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27003; HostUnreachable: Connection refused
+2017-02-28T18:50:17.409+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52087 #3 (2 connections now open)
+2017-02-28T18:50:17.409+1100 I -        [conn3] end connection 127.0.0.1:52087 (2 connections now open)
+2017-02-28T18:50:17.414+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52090 #4 (2 connections now open)
+2017-02-28T18:50:17.414+1100 I NETWORK  [conn4] received client metadata from 127.0.0.1:52090 conn4: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:50:17.635+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T18:50:17.637+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-02-28T18:50:17.637+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-02-28T18:50:22.427+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52179 #5 (3 connections now open)
+2017-02-28T18:50:22.427+1100 I NETWORK  [conn5] received client metadata from 127.0.0.1:52179 conn5: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:50:22.428+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52181 #6 (4 connections now open)
+2017-02-28T18:50:22.429+1100 I NETWORK  [conn6] received client metadata from 127.0.0.1:52181 conn6: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:50:22.435+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52182 #7 (5 connections now open)
+2017-02-28T18:50:22.435+1100 I NETWORK  [conn7] received client metadata from 127.0.0.1:52182 conn7: { driver: { name: "MongoDB Internal Client", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T18:50:22.455+1100 I -        [conn7] end connection 127.0.0.1:52182 (5 connections now open)
+2017-02-28T20:20:52.003+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-02-28T20:20:52.005+1100 I -        [conn6] end connection 127.0.0.1:52181 (4 connections now open)
+2017-02-28T20:20:52.151+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58801 #8 (4 connections now open)
+2017-02-28T20:20:52.165+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-02-28T20:20:52.166+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58803 #9 (5 connections now open)
+2017-02-28T20:20:52.166+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58805 #10 (6 connections now open)
+2017-02-28T20:20:52.166+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58808 #11 (7 connections now open)
+2017-02-28T20:20:52.166+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58809 #12 (8 connections now open)
+2017-02-28T20:20:52.167+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58811 #13 (9 connections now open)
+2017-02-28T20:20:52.169+1100 I NETWORK  [conn10] received client metadata from 127.0.0.1:58805 conn10: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T20:20:52.169+1100 I NETWORK  [conn8] received client metadata from 127.0.0.1:58801 conn8: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T20:20:52.169+1100 I NETWORK  [conn9] received client metadata from 127.0.0.1:58803 conn9: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T20:20:52.169+1100 I NETWORK  [conn11] received client metadata from 127.0.0.1:58808 conn11: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T20:20:52.169+1100 I NETWORK  [conn13] received client metadata from 127.0.0.1:58811 conn13: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T20:20:52.169+1100 I NETWORK  [conn12] received client metadata from 127.0.0.1:58809 conn12: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T20:20:52.169+1100 I COMMAND  [conn5] command local.oplog.rs command: getMore { getMore: 15509677465, collection: "oplog.rs", maxTimeMS: 5000, term: 2, lastKnownCommittedOpTime: { ts: Timestamp 1488273540000|1, t: 2 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488268218000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 2 } planSummary: COLLSCAN cursorid:15509677465 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 107099ms
+2017-02-28T20:20:52.169+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-02-28T20:20:52.169+1100 I -        [conn5] end connection 127.0.0.1:52179 (9 connections now open)
+2017-02-28T20:20:52.169+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-02-28T20:20:52.169+1100 I COMMAND  [conn4] command admin.$cmd command: replSetHeartbeat { replSetHeartbeat: "z", configVersion: 1, from: "localhost:27003", fromId: 3, term: 2 } numYields:0 reslen:403 locks:{} protocol:op_command 164ms
+2017-02-28T20:20:52.169+1100 I REPL     [replExecDBWorker-2] transition to SECONDARY
+2017-02-28T20:20:52.169+1100 I NETWORK  [replExecDBWorker-2] legacy transport layer closing all connections
+2017-02-28T20:20:52.170+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 13
+2017-02-28T20:20:52.170+1100 I -        [conn4] end connection 127.0.0.1:52090 (8 connections now open)
+2017-02-28T20:20:52.170+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 12
+2017-02-28T20:20:52.170+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 11
+2017-02-28T20:20:52.170+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 10
+2017-02-28T20:20:52.170+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 9
+2017-02-28T20:20:52.170+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 8
+2017-02-28T20:20:52.170+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 4
+2017-02-28T20:20:52.170+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 1
+2017-02-28T20:20:54.169+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-02-28T20:20:54.172+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-02-28T20:20:54.172+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-02-28T20:20:54.174+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-02-28T20:20:54.175+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-02-28T20:20:54.176+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-02-28T20:21:52.170+1100 I -        [conn13] end connection 127.0.0.1:58811 (7 connections now open)
+2017-02-28T20:21:52.170+1100 I -        [conn11] end connection 127.0.0.1:58808 (7 connections now open)
+2017-02-28T20:21:52.170+1100 I -        [conn10] end connection 127.0.0.1:58805 (7 connections now open)
+2017-02-28T20:21:52.175+1100 I -        [conn12] end connection 127.0.0.1:58809 (4 connections now open)
+2017-02-28T20:25:52.182+1100 I -        [conn9] end connection 127.0.0.1:58803 (3 connections now open)
+2017-02-28T20:44:52.096+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-02-28T20:44:52.098+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-02-28T20:44:52.098+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-02-28T20:44:52.098+1100 I REPL     [ReplicationExecutor] VoteRequester(term 3 dry run) received a yes vote from localhost:27003; response message: { term: 3, voteGranted: true, reason: "", ok: 1.0 }
+2017-02-28T20:44:52.098+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-02-28T20:44:52.099+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-02-28T20:44:52.099+1100 I REPL     [ReplicationExecutor] VoteRequester(term 4) received a yes vote from localhost:27003; response message: { term: 4, voteGranted: true, reason: "", ok: 1.0 }
+2017-02-28T20:44:52.099+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 4
+2017-02-28T20:44:52.099+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-02-28T20:44:52.099+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-02-28T20:44:52.099+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-02-28T20:44:52.099+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T20:44:52.101+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-02-28T20:44:52.101+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-02-28T20:44:52.101+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-02-28T20:44:52.101+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-02-28T20:44:52.101+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-02-28T20:44:52.102+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-02-28T20:44:52.102+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-02-28T20:44:52.102+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-02-28T20:44:54.196+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:57851 #14 (3 connections now open)
+2017-02-28T20:44:54.196+1100 I NETWORK  [conn14] received client metadata from 127.0.0.1:57851 conn14: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T20:44:54.198+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:57853 #15 (4 connections now open)
+2017-02-28T20:44:54.198+1100 I NETWORK  [conn15] received client metadata from 127.0.0.1:57853 conn15: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T20:46:57.712+1100 I COMMAND  [conn15] command local.oplog.rs command: getMore { getMore: 13081647466, collection: "oplog.rs", maxTimeMS: 5000, term: 4, lastKnownCommittedOpTime: { ts: Timestamp 1488275212000|1, t: 4 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488274382000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 4 } planSummary: COLLSCAN cursorid:13081647466 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 5472ms
+2017-02-28T21:33:56.050+1100 I REPL     [conn8] stepping down from primary, because a new term has begun: 5
+2017-02-28T21:33:56.052+1100 I REPL     [replExecDBWorker-1] transition to SECONDARY
+2017-02-28T21:33:56.052+1100 I NETWORK  [replExecDBWorker-1] legacy transport layer closing all connections
+2017-02-28T21:33:56.052+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 15
+2017-02-28T21:33:56.052+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 14
+2017-02-28T21:33:56.052+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 8
+2017-02-28T21:33:56.052+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 1
+2017-02-28T21:33:56.208+1100 I -        [conn14] end connection 127.0.0.1:57851 (4 connections now open)
+2017-02-28T21:33:56.208+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49212 #16 (4 connections now open)
+2017-02-28T21:33:56.208+1100 I NETWORK  [conn16] received client metadata from 127.0.0.1:49212 conn16: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T21:33:58.465+1100 I COMMAND  [conn15] command local.oplog.rs command: getMore { getMore: 13081647466, collection: "oplog.rs", maxTimeMS: 5000, term: 4, lastKnownCommittedOpTime: { ts: Timestamp 1488277063000|1, t: 4 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488274382000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 4 } planSummary: COLLSCAN cursorid:13081647466 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 970181ms
+2017-02-28T21:33:58.466+1100 I -        [conn15] end connection 127.0.0.1:57853 (4 connections now open)
+2017-02-28T21:34:01.062+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-02-28T21:34:02.049+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-02-28T21:34:02.049+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-02-28T21:34:02.051+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-02-28T21:34:02.052+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-02-28T21:34:02.053+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-02-28T21:34:56.055+1100 I -        [conn8] end connection 127.0.0.1:58801 (3 connections now open)
+2017-02-28T22:19:00.006+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-02-28T22:19:00.049+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-02-28T22:19:00.050+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T22:19:00.051+1100 I REPL     [ReplicationExecutor] VoteRequester(term 5 dry run) received a yes vote from localhost:27002; response message: { term: 5, voteGranted: true, reason: "", ok: 1.0 }
+2017-02-28T22:19:00.051+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-02-28T22:19:00.052+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-02-28T22:19:00.053+1100 I REPL     [ReplicationExecutor] VoteRequester(term 6) received a yes vote from localhost:27002; response message: { term: 6, voteGranted: true, reason: "", ok: 1.0 }
+2017-02-28T22:19:00.053+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 6
+2017-02-28T22:19:00.053+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-02-28T22:19:00.053+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-02-28T22:19:00.053+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-02-28T22:19:00.053+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-02-28T22:19:00.054+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-02-28T22:19:00.054+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-02-28T22:19:00.054+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-02-28T22:19:00.062+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-02-28T22:19:00.062+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-02-28T22:19:00.066+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-02-28T22:19:05.127+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:59464 #17 (3 connections now open)
+2017-02-28T22:19:05.128+1100 I NETWORK  [conn17] received client metadata from 127.0.0.1:59464 conn17: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T22:19:05.184+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:59466 #18 (4 connections now open)
+2017-02-28T22:19:05.185+1100 I NETWORK  [conn18] received client metadata from 127.0.0.1:59466 conn18: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T23:33:47.007+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-02-28T23:33:47.049+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-02-28T23:33:47.050+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-02-28T23:33:47.051+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-02-28T23:33:47.051+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50701 #19 (5 connections now open)
+2017-02-28T23:33:47.052+1100 I NETWORK  [conn19] received client metadata from 127.0.0.1:50701 conn19: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-02-28T23:33:47.052+1100 I REPL     [replExecDBWorker-0] transition to SECONDARY
+2017-02-28T23:33:47.052+1100 I NETWORK  [replExecDBWorker-0] legacy transport layer closing all connections
+2017-02-28T23:33:47.052+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 19
+2017-02-28T23:33:47.052+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 18
+2017-02-28T23:33:47.052+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 17
+2017-02-28T23:33:47.052+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 16
+2017-02-28T23:33:47.052+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 1
+2017-02-28T23:33:47.056+1100 I -        [conn17] end connection 127.0.0.1:59464 (5 connections now open)
+2017-02-28T23:33:49.033+1100 I COMMAND  [conn18] command local.oplog.rs command: getMore { getMore: 15113750423, collection: "oplog.rs", maxTimeMS: 5000, term: 6, lastKnownCommittedOpTime: { ts: Timestamp 1488284020000|1, t: 6 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488279636000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 6 } planSummary: COLLSCAN cursorid:15113750423 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1203394ms
+2017-02-28T23:33:49.034+1100 I -        [conn18] end connection 127.0.0.1:59466 (4 connections now open)
+2017-02-28T23:33:49.059+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-02-28T23:33:49.060+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-02-28T23:33:49.061+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-02-28T23:33:49.062+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-02-28T23:33:49.068+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-02-28T23:33:49.069+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-02-28T23:34:47.060+1100 I -        [conn16] end connection 127.0.0.1:49212 (3 connections now open)
+2017-03-01T00:34:44.015+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T00:34:44.015+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T00:34:44.020+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T00:34:44.020+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T00:34:44.023+1100 I REPL     [ReplicationExecutor] VoteRequester(term 7 dry run) received a yes vote from localhost:27002; response message: { term: 7, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T00:34:44.023+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T00:34:44.024+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T00:34:44.050+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T00:34:44.051+1100 I REPL     [ReplicationExecutor] VoteRequester(term 8) received a yes vote from localhost:27002; response message: { term: 8, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T00:34:44.051+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 8
+2017-03-01T00:34:44.051+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T00:34:44.051+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T00:34:44.051+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T00:34:44.201+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T00:34:44.201+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T00:34:44.202+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T00:34:44.202+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T00:34:44.202+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T00:34:44.202+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T00:34:44.204+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T00:34:49.085+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51864 #20 (3 connections now open)
+2017-03-01T00:34:49.086+1100 I NETWORK  [conn20] received client metadata from 127.0.0.1:51864 conn20: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T00:34:49.087+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51866 #21 (4 connections now open)
+2017-03-01T00:34:49.087+1100 I NETWORK  [conn21] received client metadata from 127.0.0.1:51866 conn21: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T00:55:48.012+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52942 #22 (5 connections now open)
+2017-03-01T00:55:48.013+1100 I NETWORK  [conn22] received client metadata from 127.0.0.1:52942 conn22: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T00:55:48.051+1100 I REPL     [conn22] stepping down from primary, because a new term has begun: 9
+2017-03-01T00:55:48.051+1100 I REPL     [replExecDBWorker-2] transition to SECONDARY
+2017-03-01T00:55:48.051+1100 I NETWORK  [replExecDBWorker-2] legacy transport layer closing all connections
+2017-03-01T00:55:48.051+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 22
+2017-03-01T00:55:48.051+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 21
+2017-03-01T00:55:48.051+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 20
+2017-03-01T00:55:48.051+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 19
+2017-03-01T00:55:48.051+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 1
+2017-03-01T00:55:48.052+1100 I -        [conn22] end connection 127.0.0.1:52942 (5 connections now open)
+2017-03-01T00:55:48.052+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T00:55:48.052+1100 I -        [conn21] end connection 127.0.0.1:51866 (4 connections now open)
+2017-03-01T00:55:48.053+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52947 #23 (4 connections now open)
+2017-03-01T00:55:48.053+1100 I NETWORK  [conn23] received client metadata from 127.0.0.1:52947 conn23: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T00:55:49.339+1100 I COMMAND  [conn20] command local.oplog.rs command: getMore { getMore: 15293277368, collection: "oplog.rs", maxTimeMS: 5000, term: 8, lastKnownCommittedOpTime: { ts: Timestamp 1488288944000|1, t: 8 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488285287000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 8 } planSummary: COLLSCAN cursorid:15293277368 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1205041ms
+2017-03-01T00:55:49.339+1100 I -        [conn20] end connection 127.0.0.1:51864 (4 connections now open)
+2017-03-01T00:55:54.057+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T00:55:54.057+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T00:55:54.059+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T00:55:54.067+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T00:55:54.070+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T00:56:48.057+1100 I -        [conn19] end connection 127.0.0.1:50701 (3 connections now open)
+2017-03-01T01:16:49.007+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T01:16:49.007+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T01:16:49.007+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T01:16:49.007+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T01:16:49.043+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T01:16:49.043+1100 I REPL     [ReplicationExecutor] VoteRequester(term 9 dry run) received a yes vote from localhost:27002; response message: { term: 9, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T01:16:49.043+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T01:16:49.043+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T01:16:49.044+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T01:16:49.045+1100 I REPL     [ReplicationExecutor] VoteRequester(term 10) received a yes vote from localhost:27002; response message: { term: 10, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T01:16:49.045+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 10
+2017-03-01T01:16:49.045+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T01:16:49.045+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T01:16:49.045+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T01:16:49.045+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T01:16:49.045+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T01:16:49.046+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T01:16:49.057+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T01:16:54.040+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:54063 #24 (3 connections now open)
+2017-03-01T01:16:54.041+1100 I NETWORK  [conn24] received client metadata from 127.0.0.1:54063 conn24: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T01:16:54.042+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:54065 #25 (4 connections now open)
+2017-03-01T01:16:54.042+1100 I NETWORK  [conn25] received client metadata from 127.0.0.1:54065 conn25: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T01:37:50.011+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-03-01T01:37:50.011+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-03-01T01:37:50.012+1100 I REPL     [replExecDBWorker-1] transition to SECONDARY
+2017-03-01T01:37:50.012+1100 I NETWORK  [replExecDBWorker-1] legacy transport layer closing all connections
+2017-03-01T01:37:50.012+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 25
+2017-03-01T01:37:50.012+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 24
+2017-03-01T01:37:50.012+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 23
+2017-03-01T01:37:50.012+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 1
+2017-03-01T01:37:50.013+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-03-01T01:37:50.015+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T01:37:50.021+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:55024 #26 (5 connections now open)
+2017-03-01T01:37:50.021+1100 I NETWORK  [conn26] received client metadata from 127.0.0.1:55024 conn26: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T01:37:50.047+1100 I -        [conn25] end connection 127.0.0.1:54065 (5 connections now open)
+2017-03-01T01:37:52.671+1100 I COMMAND  [conn24] command local.oplog.rs command: getMore { getMore: 13482762803, collection: "oplog.rs", maxTimeMS: 5000, term: 10, lastKnownCommittedOpTime: { ts: Timestamp 1488291469000|1, t: 10 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488290208000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 10 } planSummary: COLLSCAN cursorid:13482762803 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1203556ms
+2017-03-01T01:37:52.672+1100 I -        [conn24] end connection 127.0.0.1:54063 (4 connections now open)
+2017-03-01T01:37:55.023+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T01:37:55.036+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T01:37:55.038+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T01:37:55.040+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T01:37:55.040+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T01:37:55.042+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T01:38:50.051+1100 I -        [conn26] end connection 127.0.0.1:55024 (3 connections now open)
+2017-03-01T02:38:47.004+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T02:38:47.004+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T02:38:47.004+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T02:38:47.005+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T02:38:47.012+1100 I REPL     [ReplicationExecutor] VoteRequester(term 11 dry run) received a yes vote from localhost:27002; response message: { term: 11, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T02:38:47.012+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T02:38:47.015+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T02:38:47.015+1100 I REPL     [ReplicationExecutor] VoteRequester(term 12) received a yes vote from localhost:27002; response message: { term: 12, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T02:38:47.015+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 12
+2017-03-01T02:38:47.015+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T02:38:47.015+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T02:38:47.015+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T02:38:47.021+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T02:38:47.022+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T02:38:47.022+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T02:38:47.022+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T02:38:47.022+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T02:38:47.022+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T02:38:47.022+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T02:38:47.024+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T02:38:52.041+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:56235 #27 (3 connections now open)
+2017-03-01T02:38:52.041+1100 I NETWORK  [conn27] received client metadata from 127.0.0.1:56235 conn27: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T02:38:52.043+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:56237 #28 (4 connections now open)
+2017-03-01T02:38:52.043+1100 I NETWORK  [conn28] received client metadata from 127.0.0.1:56237 conn28: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T02:59:50.005+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-03-01T02:59:50.005+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-03-01T02:59:50.007+1100 I REPL     [replExecDBWorker-0] transition to SECONDARY
+2017-03-01T02:59:50.007+1100 I NETWORK  [replExecDBWorker-0] legacy transport layer closing all connections
+2017-03-01T02:59:50.007+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 28
+2017-03-01T02:59:50.007+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 27
+2017-03-01T02:59:50.007+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 23
+2017-03-01T02:59:50.007+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 1
+2017-03-01T02:59:50.012+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-03-01T02:59:50.012+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T02:59:50.014+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:57238 #29 (5 connections now open)
+2017-03-01T02:59:50.014+1100 I NETWORK  [conn29] received client metadata from 127.0.0.1:57238 conn29: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T02:59:50.015+1100 I -        [conn27] end connection 127.0.0.1:56235 (5 connections now open)
+2017-03-01T02:59:51.949+1100 I COMMAND  [conn28] command local.oplog.rs command: getMore { getMore: 17046216292, collection: "oplog.rs", maxTimeMS: 5000, term: 12, lastKnownCommittedOpTime: { ts: Timestamp 1488296387000|1, t: 12 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488292730000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 12 } planSummary: COLLSCAN cursorid:17046216292 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1204865ms
+2017-03-01T02:59:51.949+1100 I -        [conn28] end connection 127.0.0.1:56237 (4 connections now open)
+2017-03-01T02:59:55.017+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T02:59:55.044+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T02:59:55.044+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T02:59:55.046+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T02:59:55.046+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T02:59:55.048+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T03:00:50.023+1100 I -        [conn23] end connection 127.0.0.1:52947 (3 connections now open)
+2017-03-01T04:00:48.009+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T04:00:48.009+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T04:00:48.009+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T04:00:48.009+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T04:00:48.016+1100 I REPL     [ReplicationExecutor] VoteRequester(term 13 dry run) received a yes vote from localhost:27002; response message: { term: 13, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T04:00:48.016+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T04:00:48.019+1100 I REPL     [ReplicationExecutor] VoteRequester(term 14) received a yes vote from localhost:27002; response message: { term: 14, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T04:00:48.019+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 14
+2017-03-01T04:00:48.019+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T04:00:48.019+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T04:00:48.019+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T04:00:48.022+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T04:00:48.024+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T04:00:48.025+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T04:00:48.025+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T04:00:48.025+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T04:00:48.026+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T04:00:48.026+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T04:00:48.034+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T04:00:48.035+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T04:00:53.039+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58537 #30 (3 connections now open)
+2017-03-01T04:00:53.040+1100 I NETWORK  [conn30] received client metadata from 127.0.0.1:58537 conn30: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T04:00:53.041+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58539 #31 (4 connections now open)
+2017-03-01T04:00:53.041+1100 I NETWORK  [conn31] received client metadata from 127.0.0.1:58539 conn31: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T04:22:07.007+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-03-01T04:22:07.008+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-03-01T04:22:07.008+1100 I REPL     [replExecDBWorker-2] transition to SECONDARY
+2017-03-01T04:22:07.008+1100 I NETWORK  [replExecDBWorker-2] legacy transport layer closing all connections
+2017-03-01T04:22:07.008+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 31
+2017-03-01T04:22:07.008+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 30
+2017-03-01T04:22:07.008+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 29
+2017-03-01T04:22:07.008+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 1
+2017-03-01T04:22:07.010+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-03-01T04:22:07.011+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T04:22:07.016+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:59819 #32 (5 connections now open)
+2017-03-01T04:22:07.017+1100 I NETWORK  [conn32] received client metadata from 127.0.0.1:59819 conn32: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T04:22:07.017+1100 I -        [conn31] end connection 127.0.0.1:58539 (5 connections now open)
+2017-03-01T04:22:08.366+1100 I COMMAND  [conn30] command local.oplog.rs command: getMore { getMore: 15848528845, collection: "oplog.rs", maxTimeMS: 5000, term: 14, lastKnownCommittedOpTime: { ts: Timestamp 1488301318000|1, t: 14 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488297650000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 14 } planSummary: COLLSCAN cursorid:15848528845 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1205202ms
+2017-03-01T04:22:08.366+1100 I -        [conn30] end connection 127.0.0.1:58537 (4 connections now open)
+2017-03-01T04:22:12.018+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T04:22:12.049+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T04:22:12.049+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T04:22:12.051+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T04:22:12.052+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T04:22:12.053+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T04:43:07.007+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T04:43:07.007+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T04:43:07.010+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T04:43:07.010+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T04:43:07.010+1100 I REPL     [replication-7] Restarting oplog query due to error: ExceededTimeLimit: Operation timed out, request was RemoteCommand 30398 -- target:localhost:27003 db:local expDate:2017-03-01T04:23:12.097+1100 cmd:{ getMore: 13955308525, collection: "oplog.rs", maxTimeMS: 5000, term: 15, lastKnownCommittedOpTime: { ts: Timestamp 1488302577000|1, t: 15 } }. Last fetched optime (with hash): { ts: Timestamp 1488302577000|1, t: 15 }[-356783065525132725]. Restarts remaining: 3
+2017-03-01T04:43:07.010+1100 I REPL     [replication-7] Scheduled new oplog query Fetcher source: localhost:27003 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488302577000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 15 } query metadata: { $replData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 10000ms inShutdown: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 30416 -- target:localhost:27003 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488302577000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 15 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-03-01T04:43:07.010+1100 I -        [conn32] end connection 127.0.0.1:59819 (3 connections now open)
+2017-03-01T04:43:07.011+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T04:43:07.011+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T04:43:07.015+1100 I REPL     [ReplicationExecutor] VoteRequester(term 15 dry run) received a yes vote from localhost:27002; response message: { term: 15, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T04:43:07.015+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T04:43:07.016+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T04:43:07.017+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T04:43:07.017+1100 I REPL     [ReplicationExecutor] VoteRequester(term 16) received a no vote from localhost:27003 with reason "candidate's data is staler than mine"; response message: { term: 16, voteGranted: false, reason: "candidate's data is staler than mine", ok: 1.0 }
+2017-03-01T04:43:07.017+1100 I REPL     [ReplicationExecutor] VoteRequester(term 16) received a yes vote from localhost:27002; response message: { term: 16, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T04:43:07.017+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 16
+2017-03-01T04:43:07.017+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T04:43:07.021+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T04:43:07.023+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T04:43:07.024+1100 I REPL     [rsSync] Finished catch-up oplog after becoming primary.
+2017-03-01T04:43:07.026+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: sync source localhost:27003 (last optime: { ts: Timestamp 0|0, t: -1 }; sync source index: -1; primary index: -1) is no longer valid
+2017-03-01T04:43:07.026+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T04:43:07.026+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T04:43:07.026+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T04:43:07.026+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T04:43:12.033+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T04:43:12.044+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:60935 #33 (3 connections now open)
+2017-03-01T04:43:12.044+1100 I NETWORK  [conn33] received client metadata from 127.0.0.1:60935 conn33: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T04:43:12.046+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:60937 #34 (4 connections now open)
+2017-03-01T04:43:12.046+1100 I NETWORK  [conn34] received client metadata from 127.0.0.1:60937 conn34: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T05:04:08.005+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-03-01T05:04:08.005+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-03-01T05:04:08.007+1100 I COMMAND  [conn33] command local.oplog.rs command: getMore { getMore: 14376288325, collection: "oplog.rs", maxTimeMS: 5000, term: 16, lastKnownCommittedOpTime: { ts: Timestamp 1488303837000|1, t: 16 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488303787000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 16 } planSummary: COLLSCAN cursorid:14376288325 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1205881ms
+2017-03-01T05:04:08.007+1100 I REPL     [replExecDBWorker-1] transition to SECONDARY
+2017-03-01T05:04:08.007+1100 I NETWORK  [replExecDBWorker-1] legacy transport layer closing all connections
+2017-03-01T05:04:08.007+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 34
+2017-03-01T05:04:08.007+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 33
+2017-03-01T05:04:08.008+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 29
+2017-03-01T05:04:08.008+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 1
+2017-03-01T05:04:08.008+1100 I -        [conn34] end connection 127.0.0.1:60937 (4 connections now open)
+2017-03-01T05:04:08.008+1100 I -        [conn33] end connection 127.0.0.1:60935 (3 connections now open)
+2017-03-01T05:04:08.011+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T05:04:08.011+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-03-01T05:04:08.020+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:61870 #35 (3 connections now open)
+2017-03-01T05:04:08.021+1100 I NETWORK  [conn35] received client metadata from 127.0.0.1:61870 conn35: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T05:04:08.025+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:61872 #36 (4 connections now open)
+2017-03-01T05:04:08.026+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:61876 #37 (5 connections now open)
+2017-03-01T05:04:08.026+1100 I NETWORK  [conn36] received client metadata from 127.0.0.1:61872 conn36: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T05:04:08.026+1100 I NETWORK  [conn37] received client metadata from 127.0.0.1:61876 conn37: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T05:04:13.020+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T05:04:13.042+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T05:04:13.042+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T05:04:13.044+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T05:04:13.044+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T05:04:13.045+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T05:05:08.023+1100 I -        [conn29] end connection 127.0.0.1:57238 (5 connections now open)
+2017-03-01T05:05:08.034+1100 I -        [conn36] end connection 127.0.0.1:61872 (4 connections now open)
+2017-03-01T06:05:05.005+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T06:05:05.005+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T06:05:05.005+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T06:05:05.005+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T06:05:05.012+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T06:05:05.012+1100 I REPL     [ReplicationExecutor] VoteRequester(term 17 dry run) received a yes vote from localhost:27002; response message: { term: 17, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T06:05:05.012+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T06:05:05.014+1100 I REPL     [ReplicationExecutor] VoteRequester(term 18) received a yes vote from localhost:27002; response message: { term: 18, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T06:05:05.014+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 18
+2017-03-01T06:05:05.014+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T06:05:05.014+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T06:05:05.014+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T06:05:05.015+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T06:05:05.020+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T06:05:05.021+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T06:05:05.021+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T06:05:05.021+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T06:05:05.021+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T06:05:05.022+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T06:05:05.028+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T06:05:10.033+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:63108 #38 (4 connections now open)
+2017-03-01T06:05:10.033+1100 I NETWORK  [conn38] received client metadata from 127.0.0.1:63108 conn38: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T06:26:23.007+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-03-01T06:26:23.007+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-03-01T06:26:23.008+1100 I REPL     [replExecDBWorker-0] transition to SECONDARY
+2017-03-01T06:26:23.008+1100 I NETWORK  [replExecDBWorker-0] legacy transport layer closing all connections
+2017-03-01T06:26:23.008+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 38
+2017-03-01T06:26:23.009+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 37
+2017-03-01T06:26:23.009+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 35
+2017-03-01T06:26:23.009+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 1
+2017-03-01T06:26:23.009+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T06:26:23.013+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-03-01T06:26:23.016+1100 I -        [conn37] end connection 127.0.0.1:61876 (4 connections now open)
+2017-03-01T06:26:23.020+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:64393 #39 (4 connections now open)
+2017-03-01T06:26:23.020+1100 I NETWORK  [conn39] received client metadata from 127.0.0.1:64393 conn39: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T06:26:24.879+1100 I COMMAND  [conn38] command local.oplog.rs command: getMore { getMore: 16410610246, collection: "oplog.rs", maxTimeMS: 5000, term: 18, lastKnownCommittedOpTime: { ts: Timestamp 1488308775000|1, t: 18 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488305108000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 18 } planSummary: COLLSCAN cursorid:16410610246 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1204724ms
+2017-03-01T06:26:24.879+1100 I -        [conn38] end connection 127.0.0.1:63108 (4 connections now open)
+2017-03-01T06:26:28.016+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T06:26:28.047+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T06:26:28.047+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T06:26:28.049+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T06:26:28.049+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T06:26:28.050+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T06:27:23.016+1100 I -        [conn35] end connection 127.0.0.1:61870 (3 connections now open)
+2017-03-01T06:47:25.017+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T06:47:25.017+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T06:47:25.017+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T06:47:25.017+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T06:47:25.018+1100 I REPL     [ReplicationExecutor] VoteRequester(term 19 dry run) received a yes vote from localhost:27002; response message: { term: 19, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T06:47:25.018+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T06:47:25.019+1100 I REPL     [ReplicationExecutor] VoteRequester(term 20) received a yes vote from localhost:27002; response message: { term: 20, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T06:47:25.019+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 20
+2017-03-01T06:47:25.019+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T06:47:25.019+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T06:47:25.019+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T06:47:25.021+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T06:47:25.022+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T06:47:25.022+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T06:47:25.023+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T06:47:25.023+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T06:47:25.023+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T06:47:25.023+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T06:47:25.031+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T06:47:26.022+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:65431 #40 (3 connections now open)
+2017-03-01T06:47:26.022+1100 I NETWORK  [conn40] received client metadata from 127.0.0.1:65431 conn40: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T06:47:26.023+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:65433 #41 (4 connections now open)
+2017-03-01T06:47:26.023+1100 I NETWORK  [conn41] received client metadata from 127.0.0.1:65433 conn41: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T06:47:27.029+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T07:08:25.006+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-03-01T07:08:25.006+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-03-01T07:08:25.010+1100 I COMMAND  [conn41] command local.oplog.rs command: getMore { getMore: 14105925884, collection: "oplog.rs", maxTimeMS: 5000, term: 20, lastKnownCommittedOpTime: { ts: Timestamp 1488311295000|1, t: 20 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488310043000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 20 } planSummary: COLLSCAN cursorid:14105925884 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1204906ms
+2017-03-01T07:08:25.010+1100 I -        [conn41] end connection 127.0.0.1:65433 (4 connections now open)
+2017-03-01T07:08:25.010+1100 I REPL     [replExecDBWorker-2] transition to SECONDARY
+2017-03-01T07:08:25.011+1100 I NETWORK  [replExecDBWorker-2] legacy transport layer closing all connections
+2017-03-01T07:08:25.011+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 40
+2017-03-01T07:08:25.011+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 39
+2017-03-01T07:08:25.011+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 1
+2017-03-01T07:08:25.011+1100 I -        [conn40] end connection 127.0.0.1:65431 (3 connections now open)
+2017-03-01T07:08:25.012+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-03-01T07:08:25.012+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T07:08:25.021+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50101 #42 (3 connections now open)
+2017-03-01T07:08:25.021+1100 I NETWORK  [conn42] received client metadata from 127.0.0.1:50101 conn42: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T07:08:25.027+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50102 #43 (4 connections now open)
+2017-03-01T07:08:25.028+1100 I NETWORK  [conn43] received client metadata from 127.0.0.1:50102 conn43: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T07:08:25.028+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50105 #44 (5 connections now open)
+2017-03-01T07:08:25.028+1100 I NETWORK  [conn44] received client metadata from 127.0.0.1:50105 conn44: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T07:08:30.018+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T07:08:30.044+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T07:08:30.044+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T07:08:30.046+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T07:08:30.047+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T07:08:30.048+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T07:09:25.021+1100 I -        [conn39] end connection 127.0.0.1:64393 (5 connections now open)
+2017-03-01T07:09:25.031+1100 I -        [conn43] end connection 127.0.0.1:50102 (4 connections now open)
+2017-03-01T07:29:28.004+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T07:29:28.004+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T07:29:28.005+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T07:29:28.005+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T07:29:28.012+1100 I REPL     [ReplicationExecutor] VoteRequester(term 21 dry run) received a yes vote from localhost:27002; response message: { term: 21, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T07:29:28.012+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T07:29:28.014+1100 I REPL     [ReplicationExecutor] VoteRequester(term 22) received a yes vote from localhost:27003; response message: { term: 22, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T07:29:28.014+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 22
+2017-03-01T07:29:28.014+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T07:29:28.015+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T07:29:28.016+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T07:29:28.016+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T07:29:28.016+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T07:29:28.017+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T07:29:28.047+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T07:29:28.058+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T07:29:33.032+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51297 #45 (4 connections now open)
+2017-03-01T07:29:33.033+1100 I NETWORK  [conn45] received client metadata from 127.0.0.1:51297 conn45: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T07:48:59.005+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-03-01T07:48:59.005+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-03-01T07:48:59.015+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-03-01T07:48:59.016+1100 I REPL     [replExecDBWorker-1] transition to SECONDARY
+2017-03-01T07:48:59.016+1100 I NETWORK  [replExecDBWorker-1] legacy transport layer closing all connections
+2017-03-01T07:48:59.016+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 45
+2017-03-01T07:48:59.016+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 44
+2017-03-01T07:48:59.016+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 42
+2017-03-01T07:48:59.016+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 1
+2017-03-01T07:48:59.016+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T07:48:59.938+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52253 #46 (5 connections now open)
+2017-03-01T07:48:59.938+1100 I NETWORK  [conn46] received client metadata from 127.0.0.1:52253 conn46: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T07:48:59.938+1100 I -        [conn44] end connection 127.0.0.1:50105 (5 connections now open)
+2017-03-01T07:49:02.938+1100 I COMMAND  [conn45] command local.oplog.rs command: getMore { getMore: 14265411600, collection: "oplog.rs", maxTimeMS: 5000, term: 22, lastKnownCommittedOpTime: { ts: Timestamp 1488313828000|1, t: 22 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488312565000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 22 } planSummary: COLLSCAN cursorid:14265411600 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 1114757ms
+2017-03-01T07:49:02.938+1100 I -        [conn45] end connection 127.0.0.1:51297 (4 connections now open)
+2017-03-01T07:49:04.026+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T07:49:04.056+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T07:49:04.056+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T07:49:04.057+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T07:49:04.058+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T07:49:04.059+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T08:09:50.004+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T08:09:50.006+1100 I -        [conn42] end connection 127.0.0.1:50101 (3 connections now open)
+2017-03-01T08:09:50.046+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T08:09:50.046+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T08:09:50.047+1100 I REPL     [ReplicationExecutor] VoteRequester(term 23 dry run) received a yes vote from localhost:27002; response message: { term: 23, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T08:09:50.047+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T08:09:50.047+1100 I REPL     [ReplicationExecutor] VoteRequester(term 24) received a no vote from localhost:27003 with reason "candidate's data is staler than mine"; response message: { term: 24, voteGranted: false, reason: "candidate's data is staler than mine", ok: 1.0 }
+2017-03-01T08:09:50.047+1100 I REPL     [ReplicationExecutor] VoteRequester(term 24) received a yes vote from localhost:27002; response message: { term: 24, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T08:09:50.048+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 24
+2017-03-01T08:09:50.048+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T08:09:50.048+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T08:09:50.048+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T08:09:50.048+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T08:09:50.048+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T08:09:50.048+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T08:09:50.048+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T08:09:50.057+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T08:09:50.059+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T08:09:55.085+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53288 #47 (3 connections now open)
+2017-03-01T08:09:55.085+1100 I NETWORK  [conn47] received client metadata from 127.0.0.1:53288 conn47: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:09:55.087+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53290 #48 (4 connections now open)
+2017-03-01T08:09:55.087+1100 I NETWORK  [conn48] received client metadata from 127.0.0.1:53290 conn48: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:13:32.012+1100 I REPL     [conn46] stepping down from primary, because a new term has begun: 25
+2017-03-01T08:13:32.012+1100 I REPL     [replExecDBWorker-0] transition to SECONDARY
+2017-03-01T08:13:32.012+1100 I NETWORK  [replExecDBWorker-0] legacy transport layer closing all connections
+2017-03-01T08:13:32.012+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 48
+2017-03-01T08:13:32.012+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 47
+2017-03-01T08:13:32.012+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 46
+2017-03-01T08:13:32.012+1100 I NETWORK  [replExecDBWorker-0] Skip closing connection for connection # 1
+2017-03-01T08:13:32.013+1100 I -        [conn46] end connection 127.0.0.1:52253 (4 connections now open)
+2017-03-01T08:13:32.013+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T08:13:32.022+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:54295 #49 (4 connections now open)
+2017-03-01T08:13:32.023+1100 I NETWORK  [conn49] received client metadata from 127.0.0.1:54295 conn49: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:13:32.024+1100 I -        [conn48] end connection 127.0.0.1:53290 (4 connections now open)
+2017-03-01T08:13:32.025+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:54299 #50 (4 connections now open)
+2017-03-01T08:13:32.025+1100 I NETWORK  [conn50] received client metadata from 127.0.0.1:54299 conn50: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:13:33.754+1100 I COMMAND  [conn47] command local.oplog.rs command: getMore { getMore: 15852284965, collection: "oplog.rs", maxTimeMS: 5000, term: 24, lastKnownCommittedOpTime: { ts: Timestamp 1488316250000|1, t: 24 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488314989000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 24 } planSummary: COLLSCAN cursorid:15852284965 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 163571ms
+2017-03-01T08:13:33.754+1100 I -        [conn47] end connection 127.0.0.1:53288 (4 connections now open)
+2017-03-01T08:13:37.040+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T08:13:37.040+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T08:13:37.042+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T08:13:37.042+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T08:13:37.043+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T08:21:52.009+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T08:21:52.009+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T08:21:52.012+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T08:21:52.013+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T08:21:52.014+1100 I REPL     [replication-12] Restarting oplog query due to error: ExceededTimeLimit: Operation timed out, request was RemoteCommand 32085 -- target:localhost:27003 db:local expDate:2017-03-01T08:14:37.131+1100 cmd:{ getMore: 14408081203, collection: "oplog.rs", maxTimeMS: 5000, term: 25, lastKnownCommittedOpTime: { ts: Timestamp 1488316462000|1, t: 25 } }. Last fetched optime (with hash): { ts: Timestamp 1488316462000|1, t: 25 }[8944269879501296677]. Restarts remaining: 3
+2017-03-01T08:21:52.014+1100 I REPL     [replication-12] Scheduled new oplog query Fetcher source: localhost:27003 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488316462000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 25 } query metadata: { $replData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 10000ms inShutdown: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 32103 -- target:localhost:27003 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488316462000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 25 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-03-01T08:21:52.014+1100 I -        [conn49] end connection 127.0.0.1:54295 (3 connections now open)
+2017-03-01T08:21:52.014+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T08:21:52.014+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T08:21:52.020+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T08:21:52.020+1100 I REPL     [ReplicationExecutor] VoteRequester(term 25 dry run) received a yes vote from localhost:27002; response message: { term: 25, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T08:21:52.020+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T08:21:52.023+1100 I REPL     [ReplicationExecutor] VoteRequester(term 26) received a yes vote from localhost:27002; response message: { term: 26, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T08:21:52.023+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 26
+2017-03-01T08:21:52.023+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T08:21:52.023+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T08:21:52.023+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T08:21:52.032+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T08:21:52.032+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T08:21:52.036+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: sync source localhost:27003 (last optime: { ts: Timestamp 0|0, t: -1 }; sync source index: -1; primary index: -1) is no longer valid
+2017-03-01T08:21:52.042+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T08:21:52.042+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T08:21:52.043+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T08:21:52.043+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T08:21:52.043+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T08:21:53.044+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T08:21:57.039+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:55397 #51 (3 connections now open)
+2017-03-01T08:21:57.039+1100 I NETWORK  [conn51] received client metadata from 127.0.0.1:55397 conn51: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:21:57.041+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:55399 #52 (4 connections now open)
+2017-03-01T08:21:57.041+1100 I NETWORK  [conn52] received client metadata from 127.0.0.1:55399 conn52: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:21:57.044+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T08:24:34.013+1100 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-03-01T08:24:34.013+1100 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-03-01T08:24:34.014+1100 I -        [conn51] end connection 127.0.0.1:55397 (4 connections now open)
+2017-03-01T08:24:34.015+1100 I REPL     [replExecDBWorker-2] transition to SECONDARY
+2017-03-01T08:24:34.015+1100 I NETWORK  [replExecDBWorker-2] legacy transport layer closing all connections
+2017-03-01T08:24:34.015+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 52
+2017-03-01T08:24:34.015+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 50
+2017-03-01T08:24:34.015+1100 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 1
+2017-03-01T08:24:34.017+1100 I REPL     [ReplicationExecutor] Member localhost:27002 is now in state ARBITER
+2017-03-01T08:24:34.017+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T08:24:34.017+1100 I COMMAND  [conn52] command local.oplog.rs command: getMore { getMore: 16150954618, collection: "oplog.rs", maxTimeMS: 5000, term: 26, lastKnownCommittedOpTime: { ts: Timestamp 1488316963000|1, t: 26 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488316912000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 26 } planSummary: COLLSCAN cursorid:16150954618 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 }, acquireWaitCount: { r: 1 }, timeAcquiringMicros: { r: 2263 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 105905ms
+2017-03-01T08:24:34.018+1100 I -        [conn52] end connection 127.0.0.1:55399 (3 connections now open)
+2017-03-01T08:24:34.028+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:56324 #53 (3 connections now open)
+2017-03-01T08:24:34.028+1100 I NETWORK  [conn53] received client metadata from 127.0.0.1:56324 conn53: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:24:34.038+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:56325 #54 (4 connections now open)
+2017-03-01T08:24:34.038+1100 I NETWORK  [conn54] received client metadata from 127.0.0.1:56325 conn54: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:24:34.039+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:56329 #55 (5 connections now open)
+2017-03-01T08:24:34.039+1100 I NETWORK  [conn55] received client metadata from 127.0.0.1:56329 conn55: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T08:24:39.024+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T08:24:39.042+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T08:24:39.043+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T08:24:39.045+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T09:03:40.006+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T09:03:40.007+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T09:03:40.010+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T09:03:40.010+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T09:03:40.011+1100 I REPL     [replication-13] Restarting oplog query due to error: ExceededTimeLimit: Operation timed out, request was RemoteCommand 32415 -- target:localhost:27003 db:local expDate:2017-03-01T08:25:39.099+1100 cmd:{ getMore: 13526849555, collection: "oplog.rs", maxTimeMS: 5000, term: 27, lastKnownCommittedOpTime: { ts: Timestamp 1488317124000|1, t: 27 } }. Last fetched optime (with hash): { ts: Timestamp 1488317124000|1, t: 27 }[7863964244273574728]. Restarts remaining: 3
+2017-03-01T09:03:40.011+1100 I REPL     [replication-13] Scheduled new oplog query Fetcher source: localhost:27003 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488317124000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 27 } query metadata: { $replData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 10000ms inShutdown: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 32433 -- target:localhost:27003 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488317124000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 27 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-03-01T09:03:40.011+1100 I -        [conn50] end connection 127.0.0.1:54299 (5 connections now open)
+2017-03-01T09:03:40.013+1100 I -        [conn53] end connection 127.0.0.1:56324 (4 connections now open)
+2017-03-01T09:03:40.015+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T09:03:40.015+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T09:03:40.016+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T09:03:40.019+1100 I -        [conn55] end connection 127.0.0.1:56329 (3 connections now open)
+2017-03-01T09:03:40.021+1100 I REPL     [ReplicationExecutor] VoteRequester(term 27 dry run) received a no vote from localhost:27003 with reason "candidate's data is staler than mine"; response message: { term: 27, voteGranted: false, reason: "candidate's data is staler than mine", ok: 1.0 }
+2017-03-01T09:03:40.021+1100 I REPL     [ReplicationExecutor] VoteRequester(term 27 dry run) received a yes vote from localhost:27002; response message: { term: 27, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T09:03:40.021+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T09:03:40.025+1100 I REPL     [ReplicationExecutor] VoteRequester(term 28) received a yes vote from localhost:27002; response message: { term: 28, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T09:03:40.025+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 28
+2017-03-01T09:03:40.025+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T09:03:40.031+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T09:03:40.032+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T09:03:40.033+1100 I REPL     [rsSync] Finished catch-up oplog after becoming primary.
+2017-03-01T09:03:40.035+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: sync source localhost:27003 (last optime: { ts: Timestamp 0|0, t: -1 }; sync source index: -1; primary index: -1) is no longer valid
+2017-03-01T09:03:40.035+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T09:03:40.042+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T09:03:40.042+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T09:03:45.039+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T09:03:45.041+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:57411 #56 (3 connections now open)
+2017-03-01T09:03:45.041+1100 I NETWORK  [conn56] received client metadata from 127.0.0.1:57411 conn56: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T09:03:45.043+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:57413 #57 (4 connections now open)
+2017-03-01T09:03:45.043+1100 I NETWORK  [conn57] received client metadata from 127.0.0.1:57413 conn57: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T09:09:23.004+1100 I COMMAND  [conn57] command local.oplog.rs command: getMore { getMore: 13352094161, collection: "oplog.rs", maxTimeMS: 5000, term: 28, lastKnownCommittedOpTime: { ts: Timestamp 1488319460000|1, t: 28 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488319420000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 28 } planSummary: COLLSCAN cursorid:13352094161 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 302892ms
+2017-03-01T09:09:23.007+1100 I -        [conn57] end connection 127.0.0.1:57413 (4 connections now open)
+2017-03-01T09:09:23.007+1100 I -        [conn56] end connection 127.0.0.1:57411 (3 connections now open)
+2017-03-01T09:09:23.012+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58188 #58 (3 connections now open)
+2017-03-01T09:09:23.013+1100 I NETWORK  [conn58] received client metadata from 127.0.0.1:58188 conn58: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T09:09:23.023+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:58195 #59 (4 connections now open)
+2017-03-01T09:09:23.023+1100 I NETWORK  [conn59] received client metadata from 127.0.0.1:58195 conn59: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T09:12:58.682+1100 I COMMAND  [conn59] command local.oplog.rs command: getMore { getMore: 14464250123, collection: "oplog.rs", maxTimeMS: 5000, term: 28, lastKnownCommittedOpTime: { ts: Timestamp 1488319967000|1, t: 28 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488319460000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 28 } planSummary: COLLSCAN cursorid:14464250123 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 6383ms
+2017-03-01T17:21:45.014+1100 I COMMAND  [conn59] command local.oplog.rs command: getMore { getMore: 14464250123, collection: "oplog.rs", maxTimeMS: 5000, term: 28, lastKnownCommittedOpTime: { ts: Timestamp 1488349028000|1, t: 28 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488319460000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 28 } planSummary: COLLSCAN cursorid:14464250123 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 276667ms
+2017-03-01T17:21:45.044+1100 I -        [conn58] end connection 127.0.0.1:58188 (4 connections now open)
+2017-03-01T17:21:45.053+1100 I -        [conn59] end connection 127.0.0.1:58195 (4 connections now open)
+2017-03-01T17:21:45.054+1100 I REPL     [conn54] stepping down from primary, because a new term has begun: 29
+2017-03-01T17:21:45.054+1100 I REPL     [replExecDBWorker-1] transition to SECONDARY
+2017-03-01T17:21:45.054+1100 I NETWORK  [replExecDBWorker-1] legacy transport layer closing all connections
+2017-03-01T17:21:45.055+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 54
+2017-03-01T17:21:45.055+1100 I NETWORK  [replExecDBWorker-1] Skip closing connection for connection # 1
+2017-03-01T17:21:45.056+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:64820 #60 (3 connections now open)
+2017-03-01T17:21:45.056+1100 I NETWORK  [conn60] received client metadata from 127.0.0.1:64820 conn60: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T17:21:45.057+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:64823 #61 (4 connections now open)
+2017-03-01T17:21:45.057+1100 I NETWORK  [conn61] received client metadata from 127.0.0.1:64823 conn61: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T17:21:45.059+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:64827 #62 (5 connections now open)
+2017-03-01T17:21:45.059+1100 I NETWORK  [conn62] received client metadata from 127.0.0.1:64827 conn62: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T17:21:50.064+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state PRIMARY
+2017-03-01T17:21:51.052+1100 I REPL     [rsBackgroundSync] sync source candidate: localhost:27003
+2017-03-01T17:21:51.053+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T17:21:51.056+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T17:21:51.057+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T17:21:51.058+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T17:59:49.011+1100 I REPL     [replication-11] Restarting oplog query due to error: ExceededTimeLimit: Operation timed out, request was RemoteCommand 91116 -- target:localhost:27003 db:local expDate:2017-03-01T17:22:41.134+1100 cmd:{ getMore: 14979248956, collection: "oplog.rs", maxTimeMS: 5000, term: 29, lastKnownCommittedOpTime: { ts: Timestamp 1488349346000|1, t: 29 } }. Last fetched optime (with hash): { ts: Timestamp 1488349346000|1, t: 29 }[8048868242790259977]. Restarts remaining: 3
+2017-03-01T17:59:49.011+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T17:59:49.041+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T17:59:49.041+1100 I REPL     [replication-11] Scheduled new oplog query Fetcher source: localhost:27003 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488349346000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 29 } query metadata: { $replData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 10000ms inShutdown: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 91133 -- target:localhost:27003 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488349346000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 29 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-03-01T17:59:49.043+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T17:59:49.045+1100 I -        [conn54] end connection 127.0.0.1:56325 (5 connections now open)
+2017-03-01T17:59:49.046+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T17:59:57.074+1100 I -        [conn60] end connection 127.0.0.1:64820 (4 connections now open)
+2017-03-01T17:59:57.074+1100 I -        [conn61] end connection 127.0.0.1:64823 (3 connections now open)
+2017-03-01T18:17:04.005+1100 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-03-01T18:17:04.005+1100 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-03-01T18:17:04.005+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27002
+2017-03-01T18:17:04.005+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27003
+2017-03-01T18:17:04.005+1100 I REPL     [replication-14] Restarting oplog query due to error: ExceededTimeLimit: Operation timed out, request was RemoteCommand 91239 -- target:localhost:27003 db:local expDate:2017-03-01T18:00:29.075+1100 cmd:{ getMore: 16920300641, collection: "oplog.rs", maxTimeMS: 5000, term: 29, lastKnownCommittedOpTime: { ts: Timestamp 1488351619000|1, t: 29 } }. Last fetched optime (with hash): { ts: Timestamp 1488351619000|1, t: 29 }[-1370593776545756614]. Restarts remaining: 3
+2017-03-01T18:17:04.005+1100 I REPL     [replication-14] Scheduled new oplog query Fetcher source: localhost:27003 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488351619000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 29 } query metadata: { $replData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 10000ms inShutdown: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 91257 -- target:localhost:27003 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488351619000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 29 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-03-01T18:17:04.006+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T18:17:04.006+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27003
+2017-03-01T18:17:04.012+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T18:17:04.130+1100 I REPL     [ReplicationExecutor] VoteRequester(term 29 dry run) received a yes vote from localhost:27002; response message: { term: 29, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T18:17:04.130+1100 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-03-01T18:17:04.132+1100 I REPL     [ReplicationExecutor] VoteRequester(term 30) received a yes vote from localhost:27002; response message: { term: 30, voteGranted: true, reason: "", ok: 1.0 }
+2017-03-01T18:17:04.132+1100 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 30
+2017-03-01T18:17:04.132+1100 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-03-01T18:17:04.134+1100 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-03-01T18:17:04.134+1100 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: CallbackCanceled: Callback canceled
+2017-03-01T18:17:04.134+1100 I REPL     [ReplicationExecutor] Member localhost:27003 is now in state SECONDARY
+2017-03-01T18:17:04.139+1100 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27003
+2017-03-01T18:17:04.139+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27002
+2017-03-01T18:17:04.144+1100 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-03-01T18:17:04.145+1100 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27003
+2017-03-01T18:17:07.017+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49957 #63 (3 connections now open)
+2017-03-01T18:17:07.017+1100 I NETWORK  [conn63] received client metadata from 127.0.0.1:49957 conn63: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T18:17:07.026+1100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49959 #64 (4 connections now open)
+2017-03-01T18:17:07.026+1100 I NETWORK  [conn64] received client metadata from 127.0.0.1:49959 conn64: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.0" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.4.0" } }
+2017-03-01T18:17:09.017+1100 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27003: InvalidSyncSource: Sync target is no longer valid
+2017-03-01T18:23:00.159+1100 I COMMAND  [conn63] command local.oplog.rs command: getMore { getMore: 16636325553, collection: "oplog.rs", maxTimeMS: 5000, term: 30, lastKnownCommittedOpTime: { ts: Timestamp 1488352974000|1, t: 30 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1488351619000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 30 } planSummary: COLLSCAN cursorid:16636325553 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:292 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 5814ms
