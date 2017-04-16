@@ -8,3 +8,6 @@ This repo saves all the handout from MongoDB University training classes.
 
 
 [M102](m102/README.md)
+
+[Shards](shards/shards.md)
+
