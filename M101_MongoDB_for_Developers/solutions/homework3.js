@@ -45,3 +45,9 @@ const query = (col, result) => {
 
   })
 }
+
+MongoClient.connect('mongodb://sample:sample@localhost/SampleCollections', (err, db) => {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+  resolve(db);
+});
