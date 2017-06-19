@@ -64,3 +64,5 @@ db.students.aggregate( [
   { '$sort': { 'average' : -1 } },
   { '$limit': 1 } ] )
 ```
+
+Answer: { "_id" : 13, "average" : 91.98315917172745 }
