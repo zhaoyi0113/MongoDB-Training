@@ -66,3 +66,5 @@ db.students.aggregate( [
 ```
 
 Answer: { "_id" : 13, "average" : 91.98315917172745 }
+
+# Homework 3-2
